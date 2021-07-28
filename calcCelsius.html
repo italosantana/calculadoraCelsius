@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora</title>
+	<style type="text/css">
+
+		body {
+			text-align: center;
+			font-family: Arial;
+			background-image: url(temp.jpg);
+		}
+
+		fieldset {
+			padding-top: 20px;
+			margin-left: auto;
+		    margin-right: auto;
+		    width: 5em;
+			padding-top: 50px;
+			width: 520px;
+			text-align: center;
+		}
+
+		button {
+		 background-color: #4CAF50; /* Green */
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		}
+
+		h1 {
+			
+		font-size: 70px;
+
+			}
+
+		input {
+			font-size: 50px;
+			text-align: center;
+						margin-top: 20px;
+		}	
+
+		span{
+			font-size: 29px;
+  font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>Calculadora Celsius para Fahrenheit</h1>
+	<fieldset>
+		<span>Digite o grau celsius...</span>
+		<input id="calc" type="text" name="numero">
+		<br/><br/>
+		<span>Então em fahrenheit é:</span>
+		<input id="show" type="text" name="temperatura">
+		<br/><br/>
+		<button onclick="calcular()">Calcular</button>
+	</fieldset>
+</body>
+	<script type="text/javascript">
+		 function calcular(){
+			var elementoA = 1.8;
+			var elementoB = 32;
+			var calculadora = document.getElementById("calc").value;
+			var resultado = calculadora * elementoA + elementoB;
+				document.getElementById("show").value = resultado;
+					console.log(calculadora * elementoA + elementoB);
+			};
+
+	</script>
+</html>
